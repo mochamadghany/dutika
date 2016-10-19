@@ -1,0 +1,31 @@
+- tb_win
+id_win
+id_user
+total_main
+menang
+kalah
+seri
+
+- tb_user_score
+id_user_score
+id_user
+score
+score_level
+
+-tb_user_level
+id_user_level
+id_user_score
+id_level
+
+1. tb_win & tb_user_score join sama tb_user (id_user)
+2. tb_user_level join sama tb_level (id_level)
+3. tb_user_score (score_level) join sama tb_level
+4. tb_user_score join sama tb_user_level (id_user_score)
+
+- tb_level
+id_level
+tingkat
+kelas
+score
+
+- tb_user

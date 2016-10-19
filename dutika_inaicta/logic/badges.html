@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/Sortable/1.4.2/Sortable.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://codepen.io/zavoloklom/pen/Gubja.css">
+  <link rel="stylesheet" type="text/css" href="http://codepen.io/zavoloklom/pen/yaozl.css">
+    <title>Dutika</title>
+    <link rel="icon" type="icon" href="img/logo-dutika.png" type="image/png">
+    <link rel = "stylesheet" href = "styles/style-login.css">
+</head>
+<body>
+
+<input type="checkbox" id="xBxHack" />
+        <nav class="mainNav" id="mainNav">
+            <div class="container container-nav">
+        <label class="navBars" for="xBxHack">
+            <i class="fa fa-bars"></i>
+        </label>
+                <ul id="menu" class="menu-responsive">
+            <li><a href="#"><i class="fa fa-home big"></i>&nbsp;HOME</a></li>
+            <li><a href="#">CHALLENGES</a></li>
+            <li><a href="#">BOTS</a></li>
+            <li><a href="#">LEARN</a></li>
+            <li><a href="#">FORUM</a></li>
+            <li><a href="#">RANK</a></li>
+        </ul>
+                </div>
+                <ul class="nav-list" id="nav">
+                    <li>
+
+                             <!-- notification dropdown -->      
+            <li class="message-nav dropdown">
+               <a href="#" id="dropdownMenu1" data-toggle="dropdown" class="btn-notification" aria-haspopup="true" aria-expanded="true">
+                  <i class="fa fa-bell"></i>
+                                <span class="notification-label notification-label-red">3</span>
+                  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                       <li class="notification-title">
+                        <h4>Notification</h4>
+                     </li>
+                  <a href="#" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="padding:0;">
+                     <ul class="notification-list">
+                        <li class="notification-item">
+                           <a class="notification-anchor" href="#">
+                              <span class="notification-img">
+                                 <img src="img/swag-bitch.jpg"/>
+                               </span>
+                                 <p class="notification-user">
+                                 <span>Fajar Saputo J</span> |
+                                 <span class="timestamp">15 mins ago</span>
+                                 </p>
+                                 <p class="notification-type">
+                                    I Want To <b>Fight Math</b> With You
+                                 </p>
+                                 
+                           </a>
+                        </li>
+                        <li class="notification-item">
+                           <a class="notification-anchor" href="#">
+                              <span class="notification-img">
+                                 <img src="img/swag-bitch.jpg"/>
+                               </span>
+                                 <p class="notification-user">
+                                 <span>Fajar Saputo J</span> |
+                                 <span class="timestamp">15 mins ago</span>
+                                 </p>
+                                 <p class="notification-type">
+                                    I Want To <b>Fight Math</b> With You
+                                 </p>
+                                 
+                           </a>
+                        </li>
+                        <li class="notification-item">
+                           <a class="notification-anchor" href="#">
+                              <span class="notification-img">
+                                 <img src="img/swag-bitch.jpg"/>
+                               </span>
+                                 <p class="notification-user">
+                                 <span>Fajar Saputo J</span> |
+                                 <span class="timestamp">15 mins ago</span>
+                                 </p>
+                                 <p class="notification-type">
+                                    I Want To <b>Fight Math</b> With You
+                                 </p>
+                                 
+                           </a>
+                        </li>
+                        <li class="notification-item">
+                           <a class="notification-anchor" href="#">
+                              <span class="notification-img">
+                                 <img src="img/swag-bitch.jpg"/>
+                               </span>
+                                 <p class="notification-user">
+                                 <span>Fajar Saputo J</span> |
+                                 <span class="timestamp">15 mins ago</span>
+                                 </p>
+                                 <p class="notification-type">
+                                    I Want To <b>Fight Math</b> With You
+                                 </p>
+                                 
+                           </a>
+                        </li>
+                         <li class="notification-item">
+                           <a class="notification-anchor" href="#">
+                              <span class="notification-img">
+                                 <img src="img/swag-bitch.jpg"/>
+                               </span>
+                                 <p class="notification-user">
+                                 <span>Fajar Saputo J</span> |
+                                 <span class="timestamp">15 mins ago</span>
+                                 </p>
+                                 <p class="notification-type">
+                                    I Want To <b>Fight Math</b> With You
+                                 </p>
+                                 
+                           </a>
+                        </li>
+                     </ul>
+                     <li class="notification-footer"><h4><a href="#">View All</a></h4></li>
+                  </ul>
+               </a>
+            </li>
+            <!-- end -->
+    <li class="profil-image">
+                  <a id="filter-sort-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                   <img src="img/swag-bitch.jpg" />
+                  </a>   
+                  <ul class="dropdown-menu sorting dropdown-menu-right" aria-labelledby="filter-sort-dropdown" style="margin-right:-30px;margin-top:10px;">
+                     <ul class="filter-sort-list" >
+                        <li class="filter-sort-item">
+                           <a href="#" class="black-filter"><p>Home</p></a>
+                        </li>
+                        <li class="filter-sort-item" href="#">
+                           <a href="#" class="black-filter">Edit Profile</a>
+                        </li>
+                        <li class="filter-sort-item" href="#">
+                           <a href="#" class="black-filter">Sign Out</a>
+                        </li>
+                     </ul>
+                  </ul>
+               </a>
+            </li>
+                </ul>
+            </div>
+        </nav>
+<div class="column-one" >
+    <div class="profile-content"><img src="img/swag-bitch.jpg" alt=""/>
+      <h1>Fajar Saputro J</h1>
+      <p>Rank : Sekolah Dasar</p>
+    </div>
+    <div class="score-warp">
+        <img class="img-valign" src="img/score.png" alt="" />
+        <span class="score-separator"></span>
+        <span class="non-data-text">6969 </span>
+    </div>
+    <div class="score-warp-coins">
+        <img class="img-valign" src="img/coin.png" alt="" />
+        <span class="score-separator"></span>
+        <span class="non-data-text">969696 </span>
+    </div>
+    <div style="width:100%;overflow:hidden;">
+    <p style="margin:10px;"><i class="fa fa-question"></i> Hint & Quote</p>
+<div class="fader-horizontal">
+  <ul >
+    <li>
+      <div class="box-1">
+        <img src="img/hint-bot.png"><br>
+        <p class="title-hint">You Can Fight With Bot 3 Difficult Easy,Medium and Hard.</p>
+        </div>
+    </li>
+    <li>
+    <li>
+      <div class="box-1">
+        <img src="img/hint-bot.png"><br>
+        <p class="title-hint">You Can Fight With Bot 3 Difficult Easy,Medium and Hard. 2</p>
+        </div>
+    </li>
+    <li>
+    <li>
+    <li>
+      <div class="box-1">
+        <img src="img/hint-bot.png"><br>
+        <p class="title-hint">You Can Fight With Bot 3 Difficult Easy,Medium and Hard. 3</p>
+        </div>
+    </li>
+    <li>
+    <li>
+      <div class="box-1">
+        <img src="img/hint-bot.png"><br>
+        <p class="title-hint">You Can Fight With Bot 3 Difficult Easy,Medium and Hard. 4</p>
+        </div>
+    </li>
+    <li>
+    <li>
+      <div class="box-1">
+        <img src="img/hint-bot.png"><br>
+        <p class="title-hint">You Can Fight With Bot 3 Difficult Easy,Medium and Hard. 5</p>
+        </div>
+    </li>
+    <li>
+
+  </ul>
+</div>
+</div>
+</div>
+<div class="column-two-gani">
+<div class="left">
+<div class="wrap">
+      <div class="content">
+        <a class="tooltips" href="#">
+          <div class="badges1 col">
+            <p class="quest">Aktif Forum</p>
+             <div id="progress" class="graph">
+              <div id="bar" style="width:100%"><p>1/1</p><span>Akif di Forum Dutika</span></div>
+             </div>
+          </div>
+        </a>
+        <a class="tooltips" href="#">
+          <div class="badges2 col">
+            <p class="quest">1x Menang</p>
+            <div id="progress" class="graph">
+              <div id="bar" style="width:0%"><p>0/1</p><span>Menang 1 kali duel</span></div>
+             </div>
+          </div>
+        </a>
+        <a class="tooltips" href="#">
+        <div class="badges3 col">
+          <p class="quest">10x Menang</p>
+            <div id="progress" class="graph">
+              <div id="bar" style="width:0%"><p>0/10</p><span>Menang 10 kali duel</span></div>
+             </div>
+        </div>
+        </a>
+        <a class="tooltips" href="#">
+          <div class="badges4 col">
+          <p class="quest">50x Menang</p>
+            <div id="progress" class="graph">
+              <div id="bar" style="width:0%"><p>0/50</p><span>Menang 50 kali duel</span></div>
+             </div>
+          </div>
+        </a>
+        <a class="tooltips" href="#">
+          <div class="badges5 col">
+          <p class="quest">100x Menang</p>
+            <div id="progress" class="graph">
+              <div id="bar" style="width:0%"><p>0/100</p><span>Menang 100 kali duel</span></div>
+             </div>
+          </div>
+        </a>
+        <a class="tooltips" href="#">
+          <div class="badges6 col">
+          <p class="quest">Undang 5 Teman</p>
+            <div id="progress" class="graph">
+              <div id="bar" style="width:100%"><p>5/5</p><span>Undang 5 teman</span></div>
+             </div>
+          </div>
+        </a>
+        <a class="tooltips" href="#">
+          <div class="badges7 col">
+          <p class="quest">Tingkat SMP</p>
+            <div id="progress" class="graph">
+              <div id="bar" style="width:0%"><p>0/1</p><span>Naik ke tingkat SMP</span></div>
+             </div>
+          </div>
+        </a>
+        <a class="tooltips" href="#">
+          <div class="badges8 col">
+          <p class="quest">Tingkat SMU</p>
+            <div id="progress" class="graph">
+              <div id="bar" style="width:0%"><p>0/1</p><span>Naik ke tingkat SMU</span></div>
+             </div>
+          </div>
+        </a>
+        <a class="tooltips" href="#">
+          <div class="badges9 col">
+          <p class="quest">Rank 1 SD</p>
+            <div id="progress" class="graph">
+              <div id="bar" style="width:0%"><p>0/1</p><span>Capai rank 1 SD</span></div>
+             </div>
+          </div>
+        </a>
+        <a class="tooltips" href="#">
+          <div class="badges10 col">
+          <p class="quest">Rank 1 SMP</p>
+            <div id="progress" class="graph">
+              <div id="bar" style="width:0%"><p>0/1</p><span>Capai rank 1 SMP</span></div>
+             </div>
+          </div>
+        </a>
+        <a class="tooltips" href="#">
+          <div class="badges11 col">
+          <p class="quest">Rank 1 SMU</p>
+            <div id="progress" class="graph">
+              <div id="bar" style="width:100%"><p>1/1</p><span>Capai rank 1 SMU</span></div>
+             </div>
+          </div>
+        </a>
+        <a class="tooltips" href="#">
+          <div class="badges12 col">
+          <p class="quest">Login 10 hari</p>
+            <div id="progress" class="graph">
+              <div id="bar" style="width:0%"><p>0/10</p><span>Login 10 hari berturut turut</span></div>
+             </div>
+          </div>
+        </a>
+        <a class="tooltips" href="#">
+          <div class="badges13 col">
+          <p class="quest">Login 50 hari</p>
+            <div id="progress" class="graph">
+              <div id="bar" style="width:0%"><p>0/50</p><span>Login 50 hari berturut turut</span></div>
+             </div>
+          </div>
+        </a>
+        <a class="tooltips" href="#">
+          <div class="badges14 col">
+          <p class="quest">Login 100 hari</p>
+            <div id="progress" class="graph">
+              <div id="bar" style="width:0%"><p>0/100</p><span>Login 100 hari berturut turut</span></div>
+             </div>
+          </div>
+        </a>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+<div id="toggledContent" class="toggledContent">
+    <div class="button"><p>Play Math Fight</p></div>
+</div>
+</body>
+<script>
+$(document).ready(function () {
+    "use strict";
+    var myNav = {
+        init: function () {
+            this.cacheDOM();
+            this.browserWidth();
+            this.bindEvents();
+        },
+        cacheDOM: function () {
+            this.navBars = $(".navBars");
+            this.xBxHack = $("#xBxHack");
+            this.navMenu = $("#menu");
+        },
+        browserWidth: function () {
+            $(window).resize(this.bindEvents.bind(this));
+        },
+        bindEvents: function () {
+            var width = window.innerWidth;
+
+            if (width < 600) {
+                this.navBars.click(this.animate.bind(this));
+                this.navMenu.hide();
+                this.xBxHack[0].checked = false;
+            } else {
+                this.resetNav();
+            }
+        },
+        animate: function (e) {
+            var checkbox = this.xBxHack[0];
+
+            if (!checkbox.checked) {
+                this.navMenu.slideDown();
+            } else {
+                this.navMenu.slideUp();
+            }
+
+        },
+        resetNav: function () {
+            this.navMenu.show();
+        }
+    };
+    myNav.init();
+});
+</script>
+<script>
+var contentHidden = true,
+    $toggleButton = document.getElementById('toggleButton'),
+    $toggledContent = document.getElementById('toggledContent');
+    // equivalent jQuery code:
+    // $toggleButton = $('#toggleButton');
+    // $toggledContent = $('#toggledContent');
+
+// jQuery equivalent: $toggledButton.click()
+$toggleButton.onclick = function()
+    {
+    showHideContent();
+    }
+
+function showHideContent()
+    {
+    if (contentHidden)
+        {
+        $toggleButton.innerText = 'Close MathFight';
+        contentHidden = false;
+        $toggledContent.className = "toggledContent";
+        // equivalent jQuery code:
+        // $toggledContent.removeClass('hide');
+        }
+    else
+        {
+        $toggleButton.innerText = 'Play MathFight';
+        contentHidden = true;
+        $toggledContent.className = "toggledContent hide";
+        // equivalent jQuery code:
+        // $toggledContent.addClass('hide')
+        }
+    }
+</script>
+<script type="text/javascript">
+                //this function can remove a array element.
+            Array.remove = function(array, from, to) {
+                var rest = array.slice((to || from) + 1 || array.length);
+                array.length = from < 0 ? array.length + from : from;
+                return array.push.apply(array, rest);
+            };
+        
+            //this variable represents the total number of popups can be displayed according to the viewport width
+            var total_popups = 0;
+            
+            //arrays of popups ids
+            var popups = [];
+        
+            //this is used to close a popup
+            function close_popup(id)
+            {
+                for(var iii = 0; iii < popups.length; iii++)
+                {
+                    if(id == popups[iii])
+                    {
+                        Array.remove(popups, iii);
+                        
+                        document.getElementById(id).style.display = "none";
+                        
+                        calculate_popups();
+                        
+                        return;
+                    }
+                }   
+            }
+        
+            //displays the popups. Displays based on the maximum number of popups that can be displayed on the current viewport width
+            function display_popups()
+            {
+                var right = 250;
+                
+                var iii = 0;
+                for(iii; iii < total_popups; iii++)
+                {
+                    if(popups[iii] != undefined)
+                    {
+                        var element = document.getElementById(popups[iii]);
+                        element.style.right = right + "px";
+                        right = right + 320;
+                        element.style.display = "block";
+                    }
+                }
+                
+                for(var jjj = iii; jjj < popups.length; jjj++)
+                {
+                    var element = document.getElementById(popups[jjj]);
+                    element.style.display = "none";
+                }
+            }
+            
+            //creates markup for a new popup. Adds the id to popups array.
+            function register_popup(id, name)
+            {
+                
+                for(var iii = 0; iii < popups.length; iii++)
+                {   
+                    //already registered. Bring it to front.
+                    if(id == popups[iii])
+                    {
+                        Array.remove(popups, iii);
+                    
+                        popups.unshift(id);
+                        
+                        calculate_popups();
+                        
+                        
+                        return;
+                    }
+                }               
+                
+                var element = '<div class="popup-box chat-popup" id="'+ id +'">';
+                element = element + '<div class="popup-head">';
+                element = element + '<div class="popup-head-left">'+ name +'</div>';
+                element = element + '<div class="popup-head-right"><a href="javascript:close_popup(\''+ id +'\');">&#10005;</a></div>';
+                element = element + '<div style="clear: both"></div></div><div class="popup-messages">';
+                            element = element + '<div id="messages" class="messages">';
+                element = element + '<ul>';
+                    element = element + '<li>';
+                       element = element + ' <span class="left-chat">Lel</span>';
+                        element = element + '<div class="clear"></div>';
+                   element = element + ' </li> ';
+                   element = element + ' <li>';
+                        element = element + '<span class="right-chat">Wut M8</span>';
+                       element = element + ' <div class="clear"></div>';
+                    element = element + '</li> ';
+               element = element + ' </ul>';
+              element = element + '  <div class="clear"></div>';
+            element = element + '</div>';
+            
+            element = element + '<div class="input-box">';
+                element = element + '<textarea placeholder="Write Your Message"></textarea>';
+           element = element + ' </div>';
+                element = element + '</div>';
+                element = element + '</div>';
+                document.getElementsByTagName("body")[0].innerHTML = document.getElementsByTagName("body")[0].innerHTML + element;  
+        
+                popups.unshift(id);
+                        
+                calculate_popups();
+                
+            }
+            
+            //calculate the total number of popups suitable and then populate the toatal_popups variable.
+            function calculate_popups()
+            {
+                var width = window.innerWidth;
+                if(width < 540)
+                {
+                    total_popups = 0;
+                }
+                else
+                {
+                    width = width - 200;
+                    //320 is width of a single popup box
+                    total_popups = parseInt(width/320);
+                }
+                
+                display_popups();
+                
+            }
+            
+            //recalculate when window is loaded and also when window is resized.
+            window.addEventListener("resize", calculate_popups);
+            window.addEventListener("load", calculate_popups);
+</script>
+</html>

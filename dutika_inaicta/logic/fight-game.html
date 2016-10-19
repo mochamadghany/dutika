@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>Dutika</title>
+		<link rel="icon" type="icon" href="img/logo-dutika.png" type="image/png">
+		<link rel = "stylesheet" href = "styles/style-login.css">
+			<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+			<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">      
+			<style>
+
+			</style>
+</head>
+
+<body style="overflow:auto;">
+
+<header class="versus">
+	<section id="content-user-vs" style="margin-bottom:0px;">
+		<div class="profil-versus">
+			<img src="img/swag-bitch.jpg">
+			<div class="circle-versus-data" ><p>0/100</p></div>
+			<div class="circle-versus-data" ><p>0/100</p></div>
+			<div class="circle-versus-data" ><p>0/100</p></div>
+			<div class="circle-versus-data" ><p>0/100</p></div>
+			<div class="circle-versus-data" ><p>0/100</p></div>
+		</div>
+		<p class="name-versus">Fajar Saputro J</p>
+	</section>
+	
+	<section id="middle-user-vs" style="margin-bottom:0px;">
+		<h2 class="versus"><span>0</span><span><span> : <span>69<span></h2>
+	</section>
+
+	<aside id="sidebar-user-vs" style="margin-bottom:0px;">
+		<div class="profil-versus">
+			<div class="circle-versus-data" ><p>0/100</p></div>
+			<div class="circle-versus-data" ><p>0/100</p></div>
+			<div class="circle-versus-data" ><p>0/100</p></div>
+			<div class="circle-versus-data" ><p>0/100</p></div>
+			<div class="circle-versus-data" ><p>0/100</p></div>
+			<img src="img/gani.jpg" class="enemy-versus">
+		</div>
+		<p class="name-versus">Moch Ghani R</p>
+	</aside>
+</header>
+
+<div class="progress-wrap progress-loading" data-progress-percent="-100">
+	<div class="progress-bar-loading progress-loading"></div>
+</div>
+
+<div class="content-versus">
+	<div class="label-round">
+		<p>1 /&nbsp;5</p>
+	</div>
+	<br>
+	<div class="question-versus bottom-triangle">
+		<h2>2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2= 5 ?</h2>
+	</div>
+
+	<label>
+		<div class="label-answer">
+			 <input type="radio" class="option-input radio" name="example" />
+			<span>Heeh Bener</span> 
+		</div>
+	</label>
+
+	 <label>
+		 <div class="label-answer">
+			 <input type="radio" class="option-input radio" name="example" />
+			<span>Heeh Bener</span> 
+		</div>
+	</label>
+
+	<label>
+		 <div class="label-answer">
+			 <input type="radio" class="option-input radio" name="example" />
+			<span>Heeh Bener</span> 
+		</div>
+	</label>
+
+	<label>
+		 <div class="label-answer">
+			 <input type="radio" class="option-input radio" name="example" />
+			<span>Heeh Bener</span> 
+		</div>
+	</label>
+</div>
+
+<div class="or-spacer-vertical right-skip">
+	<div class="mask"></div>
+</div>
+
+<footer class="footer-content-versus">
+	<main class="content-container">
+		<section class="box primary">
+			<a href="#"><div class="footer-skip-next"><i class="fa fa-angle-left"></i> I Give Up I Want Quit</div></a><div class="skip-separator"></div>
+		</section>
+
+		<aside class="box secondary">
+				<button class='button-versus check-versus -border-versus'>Skip This Question&nbsp;<i class="fa fa-angle-right"></i> </button>
+		</aside>
+
+		<aside class="box tertiary" >
+				<button class='button-versus done-versus -border-versus'>Submit My Answer</button>
+		</aside>
+	</main>
+</footer>
+
+</body>
+
+<script>
+	// on page load...
+		moveProgressBar();
+		// on browser resize...
+		$(window).resize(function() {
+				moveProgressBar();
+		});
+
+		// SIGNATURE PROGRESS
+		function moveProgressBar() {
+			console.log("moveProgressBar");
+				var getPercent = ($('.progress-wrap').data('progress-percent') / 100);
+				var getProgressWrapWidth = $('.progress-wrap').width();
+				var progressTotal = getPercent * getProgressWrapWidth;
+				var animationLength = 180000;
+				
+				// on page load, animate percentage bar to data percentage length
+				// .stop() used to prevent animation queueing
+				$('.progress-bar-loading').stop().animate({
+						left: progressTotal
+				}, animationLength);
+		}
+</script>
+</html>

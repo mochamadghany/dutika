@@ -1,0 +1,1 @@
+[27-Apr-2016 12:03:53 Asia/Jakarta] PHP Fatal error:  Call to a member function ambil_user() on a non-object in /home/adgvijab/public_html/dutika/application/controllers/rank/C_rank.php on line 17
