@@ -6,7 +6,7 @@
 <center>
 <a href="<?php echo base_url();?>user/duel/c_duel/find/<?php echo $this->id_user;?>" class="icon-circle fa-lock"><span>SIAP DUEL !</span></a>
 <img src="<?php echo base_url();?>logic/img/up-arrow.png">
-<p class="title-find" >Klik tombol diatas untuk memulai duel matematika</p>
+<p class="title-find" >Nigger</p>
 </center>
 </div>
 <h2> MISI HARIAN </h2>
