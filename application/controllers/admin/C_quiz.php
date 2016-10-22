@@ -277,19 +277,23 @@ class C_quiz extends CI_Controller {
 		$id = $this->uri->segment(4);
 		$data = array(
 			'id' => $id,
-			'user' => $this->seson,
+			'user' => $this->session,
 			'data' => $this->m_quiz->dataquiz($id),
 			'kategori' => $this->m_quiz->listkategori(),
 			'soal1' => $this->m_quiz->datasoaluntukquiz('soal1',$id),
 			'soal2' => $this->m_quiz->datasoaluntukquiz('soal2',$id),
 			'soal3' => $this->m_quiz->datasoaluntukquiz('soal3',$id),
 			'soal4' => $this->m_quiz->datasoaluntukquiz('soal4',$id),
-			'soal5' => $this->m_quiz->datasoaluntukquiz('soal5',$id)
+			'soal5' => $this->m_quiz->datasoaluntukquiz('soal5',$id),
+			'quiz' => $this->m_quiz->ubahsoalquiz($id)
 			);
 
-		$this->load->view('Admin/v_ubahquiz', $data);
+		$this->load->view('admin/quiz/ubah', $data);
 	}
-
+	function ubah_simpan(){
+		$this->m_quiz->ubah_simpan();
+		redirect('admin/c_quiz/daftarquiz','refresh');
+	}
 	public function ubahquizpost() {
 		$id = $this->uri->segment(4);
 		

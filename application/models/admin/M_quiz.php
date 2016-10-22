@@ -4,8 +4,8 @@ class M_quiz extends CI_Model {
 	function __construct() {
 		parent::__construct();
 		$this->admin = 'tb_admin';
-		$this->gallery_path = realpath(APPPATH. '../images/quiz');
-		$this->gallery_path_url = base_url(). 'images/quiz/';
+		$this->gallery_path = realpath(APPPATH. '../images/user/cover');
+		$this->gallery_path_url = base_url(). 'images/user/cover';
 	}
 
 		function language() {
@@ -308,7 +308,7 @@ class M_quiz extends CI_Model {
 			$config = array(
 			'allowed_types' => 'jpg|jpeg|gif|png',
 			'upload_path' =>$this->gallery_path,
-			'max_size' => 2000,
+			'max_size' => 0,
 			'file_name' => url_title($this->input->post('userfile')),
 			);
 			$judul = $this->input->post('judul');
@@ -383,7 +383,7 @@ class M_quiz extends CI_Model {
 			$config = array(
 			'allowed_types' => 'jpg|jpeg|gif|png',
 			'upload_path' =>$this->gallery_path,
-			'max_size' => 2000,
+			'max_size' => 0,
 			'file_name' => url_title($this->input->post('userfile')),
 			);
 			$this->load->library('upload',$config);
@@ -460,14 +460,13 @@ class M_quiz extends CI_Model {
 		function dataquiz($id){
 			$this->db->select('*');
 			$this->db->from('tb_quiz');
-				$this->db->join('tb_quiz_language', 'tb_quiz.id = tb_quiz_language.id_quiz');
-					$this->db->join('tb_level', 'tb_level.id_level = tb_quiz_language.id_level');
-					$this->db->where('tb_quiz.id', $id);
+			$this->db->join('tb_quiz_language', 'tb_quiz.id = tb_quiz_language.id_quiz');
+			$this->db->join('tb_level', 'tb_level.id_level = tb_quiz_language.id_level');
+			$this->db->where('tb_quiz.id', $id);
 			$data = $this->db->get();
 		return $data->result();
 		}
-
-		public function datasoaluntukquiz($idsoalnya,$idquiz){
+		function datasoaluntukquiz($idsoalnya,$idquiz){
 			$this->load->model('Admin/m_quiz');
 				$kode_soal = $this->m_quiz->dataquiz($idquiz);
 				$id_soal = $kode_soal[0]->$idsoalnya;
@@ -479,7 +478,15 @@ class M_quiz extends CI_Model {
 				$soal = $soalnya[0]->soal;
 				return $soal;
 		}
-
+		function ubahsoalquiz($id){
+			$qu = $this->db->select('*')
+						   ->from('tb_quiz_language')
+						   ->join('tb_soal_language', 'tb_quiz_language.id_quiz =tb_soal_language.id_soal')
+						   ->where('id_quiz', $id)
+						   ->get()
+						   ->result();
+			return $qu;
+		}
 		public function hapusquiz($id) {
 			$exe1 = $this->db->where('id', $id);
 			$exe1 = $this->db->delete('tb_quiz');
@@ -549,4 +556,16 @@ class M_quiz extends CI_Model {
 						  ->result();
 			return count($q);
 		}	
+		function ubah_simpan(){
+				$id_quiz = $this->input->post('id_quiz');
+				$data = array(
+					// 'cover' => $this->input->post('userfile'),
+					'judul_quiz' => $this->input->post('judul'),
+					'keterangan' => $this->input->post('keterangan'),
+					'id_level' => $this->input->post('kategori')
+					);
+			$this->db->where('id_quiz',$id_quiz);
+			$this->db->update('tb_quiz_language',$data);
+			echo "<script>alert ('Data Terubah')</script>";
+		}
 }
