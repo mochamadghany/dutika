@@ -54,10 +54,8 @@
 	</div>
 
 	<div class="prescreener show js-center grid">
-
 		<div class="answer">
 			<div id="hasil"></div>
-
 			<form method="post" id="quiz_form">
 				<?php $a=1 ?>
 					<?php foreach ($soalsoal as $soal) { ?>
@@ -140,57 +138,67 @@
 		<?php } ?>
 	</div>
 
-<script src="<?php echo base_url();?>asset/ckeditor/jquery/jQuery-2.1.4.min.js"></script>
+<script src="<?= base_url(); ?>asset/ckeditor/jquery/jQuery-2.1.4.min.js"></script>
 
 <script>
 	$(document).ready(function(){
 		var steps = $('form').find(".soal");
 		var count = steps.size();
+		var soalke = 1;
 		
 		steps.each(function(i){
-			
+			// alert(count);
 			hider=i+2;
-			if (i == 0) {   
-					$("#soal" + hider).hide();
-					createNextButton(i);
-					}
-			else if(count==i+1){
+			if (i == 0) {
+				$("#soal" + hider).hide();
+				createNextButton(i, hider);
+			} else if (count==i+1) {
 				var step=i + 1;
 				//$("#next"+step).attr('type','submit');
-							$("#next"+step).on('click',function(){
-
-					 submit();
-
-							});
-				}
-			else{
+				$("#next" + step).on('click', function(){
+					if (soalke == 2) {
+						alert("Habis");
+					} else {
+						soalke += 1;
+						submit();
+						alert('soalke'+soalke+'\ncount'+count);
+					}
+				});
+			} else {
 				$("#soal" + hider).hide();
 				createNextButton(i);
 			}
-
 		});
-			function submit(){
-				var id = <?php echo $idquiznya;?> 
-				 $.ajax({
-							type: "POST",
-							url: "<?=base_url()?>user/duel/c_duel/quiz_ajax/"+id,
-							data: $('form').serialize(),
-							success: function(msg) {
-								$("#quiz_form").addClass("hide");
-								// alert(msg);
-								$('#hasil').show();
-								$('#hasil').append(msg);
-							}
-				 });
 
+		function submit(){
+			var id = <?php echo $idquiznya; ?> 
+			$.ajax({
+				type: "POST",
+				url: "<?= base_url() ?>user/duel/c_duel/quiz_ajax/"+id,
+				data: $('form').serialize(),
+				success: function(msg) {
+					$("#quiz_form").addClass("hide");
+					$("#quiz_form").hide();
+					$('#hasil').show();
+					$('#hasil').append(msg);
+				}
+			});
 		}
+
 		function createNextButton(i){
 			var step = i + 1;
 			var step1 = i + 2;
-					$('#next'+step).on('click',function(){
-						$("#soal" + step).hide();
-						$("#soal" + step1).show();
-					});
+			// alert(step+'\n'+step1);
+			$('#next'+step).on('click',function(){
+				$("#soal" + step).hide();
+				$("#soal" + step1).show();
+				/*if (soalke <= 5) {
+					soalke+=1;
+				} else {
+					$(".soal").hide();
+				}
+				alert(soalke);*/
+			});
 		}
 	});
 </script>

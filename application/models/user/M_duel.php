@@ -102,6 +102,18 @@
 			return $p;
 		}
 
+		function tampil_pemain($id_pemain) {
+			$q = $this->db->select('*')
+						  ->from('tb_user_level')
+						  ->join('tb_user_score','tb_user_score.id_user_score = tb_user_level.id_user_score')
+						  ->join('tb_user','tb_user.id_user = tb_user_score.id_user')
+						  ->join('tb_level','tb_level.id_level = tb_user_level.id_level')
+						  ->where('tb_user.id_user', $id_pemain)
+						  ->get()
+						  ->result();
+			return $q;
+		}
+
 		
 		function ambil_room($id_user)
 		{
