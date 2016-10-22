@@ -108,7 +108,7 @@
 									<form action="<?php echo base_url();?>admin/c_quiz/tambahquizpost" method="POST" enctype="multipart/form-data">
 										<div class="form-group">
 											<label for="judul">Cover</label>
-											<input type="file" name="userfile" id="preview_gambar" class="form-control col-md-7 col-xs-12" />
+											<input type="file" name="userfile" id="preview_gambar" class="form-control col-md-7 col-xs-12"/>
 										</div>
 										<div class="form-group">
 											<label for="judul">Judul</label>

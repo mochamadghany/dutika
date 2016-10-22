@@ -5,7 +5,7 @@ class C_level extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
-		$this->load->model('admin/m_level');
+		$this->load->model('admin/M_level');
 
 		$session = $this->session->userdata('admin');
 		if (empty($session)) {

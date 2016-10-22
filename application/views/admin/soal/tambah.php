@@ -167,7 +167,7 @@
 	<div class="panel-body">
 	<div class="form-group">
 				<label for="soal<?php echo $b?>">Soal</label>
-				<input type="text" name="soal<?php echo $b?>" class="form-control">
+				<input type="text" name="soal" class="form-control">
 			</div>
 			<div class="form-group">
 				<div class="input-group">
