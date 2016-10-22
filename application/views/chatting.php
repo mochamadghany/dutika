@@ -3,7 +3,7 @@
   <h1>FRIENDS</h1>
   <br>
   <form>
-    <input type="search" placeholder="Find Friends" class="search-friend">
+    <input type="search" placeholder="Cari teman" class="search-friend">
   </form>
   <div class="people-list" id="people-list">
       <ul class="list">

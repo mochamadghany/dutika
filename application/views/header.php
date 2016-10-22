@@ -177,14 +177,14 @@
     <li>
       <div class="box-1">
         <img src="<?php echo base_url();?>logic/img/hint-bot.png"><br>
-        <p class="title-hint">Kesulitan dalam soal ?, Yuk tanya temen kamu di Forum!</p>
+        <p class="title-hint">Kesulitan dalam soal? Yuk tanya teman kamu di forum</p>
         </div>
     </li>
     <li>
     <li>
       <div class="box-1">
         <img src="<?php echo base_url();?>logic/img/hint-bot.png"><br>
-        <p class="title-hint">Kamu bisa duel bersama BOT, dengan tingkat beberapa kesulitan</p>
+        <p class="title-hint">Kamu bisa duel dengan bot, dengan tingkat beberapa kesulitan</p>
         </div>
     </li>
     <li>
@@ -206,7 +206,7 @@
     <li>
       <div class="box-1">
         <img src="<?php echo base_url();?>logic/img/hint-bot.png"><br>
-        <p class="title-hint">Raih Penghargaan setiap kamu naik level!</p>
+        <p class="title-hint">Raih penghargaan setiap kamu naik level!</p>
         </div>
     </li>
     <li>
