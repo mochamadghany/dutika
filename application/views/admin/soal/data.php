@@ -197,10 +197,10 @@
 											<td>".$a->xp."</td>
 											<td>".$a->tingkat." ".$a->kelas."</td>
 											<td class='td-actions'>
-												<a href='".base_url()."admin/c_quiz/ubahsoal/".$a->id_soal."' class='btn btn-small btn-success'>
+												<a href='".base_url()."admin/c_soal/ubahsoal/".$a->id_soal."' class='btn btn-small btn-success'>
 													<i class='btn-icon-only icon-edit'> </i>
 												</a>
-												<a href='".base_url()."admin/c_quiz/hapussoal/".$a->id_soal."' class='btn btn-danger btn-small' onclick='javascript: return confirm('Yakin ingin menghapus?')'>
+												<a href='".base_url()."admin/c_soal/hapussoal/".$a->id_soal."' class='btn btn-danger btn-small' onclick='javascript: return confirm('Yakin ingin menghapus?')'>
 													<i class='btn-icon-only icon-remove'> </i>
 												</a>
 											</td>

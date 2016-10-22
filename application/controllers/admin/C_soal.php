@@ -79,4 +79,29 @@ class C_soal extends CI_Controller {
 		$this->session->unset_userdata('isloginuser');
 		redirect('user/c_login','refresh');
 	}
+	function ubahsoal(){
+		$id    = $this->uri->segment(4);
+		$soal  = $this->m_soal->cek_ubah($id);
+		$soall = $this->m_soal->soall($id);
+		$jawaban = $this->m_soal->jawab($id);
+		$data  = array(
+			'soalu'=> $soal,
+			'kategori' => $this->m_soal->lihatdaftarsoal(),
+			'soall'	   => $soall,
+			'jawab'	   => $jawaban
+
+			);
+		$this->load->view('admin/soal/ubah',$data);
+	}
+	function ubah_simpan()
+	{
+		$id = $this->uri->segment(4);
+		      $this->m_soal->ubah_simpan();
+		redirect('admin/C_soal','refresh');
+	}
+	function hapussoal()
+	{
+		$this->m_soal->hapus();
+		redirect('admin/C_soal','refresh');
+	}
 }
